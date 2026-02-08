@@ -1,0 +1,115 @@
+name: ✨ Feature Request
+description: Suggest a new feature for HireAI
+title: "[FEAT] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ Feature Request
+        
+        Thanks for suggesting a feature! We love hearing new ideas.
+        
+        **Great feature ideas for HireAI:**
+        - New job site scrapers (Indeed, Glassdoor, Naukri, etc.)
+        - UI/UX improvements
+        - Automation enhancements
+        - New integrations
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: 🎯 Feature Description
+      description: A clear and concise description of the feature
+      placeholder: "I would like to have a feature that..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 😩 Problem it Solves
+      description: What problem does this feature solve?
+      placeholder: "Currently, users have to... which is frustrating because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: How should this feature work?
+      placeholder: |
+        The feature should:
+        1. Allow users to...
+        2. Display...
+        3. Integrate with...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives Considered
+      description: Any alternative solutions you've thought of?
+      placeholder: "I also considered... but it wouldn't work because..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: 📂 Feature Area
+      description: Which part of HireAI does this affect?
+      options:
+        - "🖥️ Frontend (UI/UX)"
+        - "⚙️ Backend (API/Services)"
+        - "🕷️ Scrapers (Job sites)"
+        - "🤖 AI/ML (LLM, Matching)"
+        - "🎭 Automation (Playwright)"
+        - "🔧 DevOps/Infrastructure"
+        - "📱 Mobile Responsiveness"
+        - "🔌 Integrations"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⭐ Priority
+      description: How important is this feature?
+      options:
+        - "🟢 Nice to have"
+        - "🟡 Should have"
+        - "🔴 Must have"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🤝 Willing to Contribute?
+      description: Would you like to implement this yourself?
+      options:
+        - label: I would like to work on this feature myself
+        - label: I need guidance to implement this
+        - label: I'm just suggesting, not implementing
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: 🎨 Mockups / Examples
+      description: Add any mockups, wireframes, or examples from other apps
+      placeholder: "Paste images or links here..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📋 Additional Context
+      description: Any other context or information?
+      placeholder: "This would be useful because..."
+    validations:
+      required: false

@@ -1,0 +1,125 @@
+name: 🕷️ New Job Site Scraper
+description: Propose or request a new job platform scraper
+title: "[SCRAPER] Add support for <Platform Name>"
+labels: ["enhancement", "scraper"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🕷️ New Job Site Scraper Request
+        
+        Help us expand HireAI to more job platforms! 
+        
+        **Popular requests:**
+        - Indeed, Glassdoor, Naukri, AngelList, RemoteOK, WeWorkRemotely, etc.
+
+  - type: input
+    id: platform-name
+    attributes:
+      label: 🌐 Platform Name
+      description: Name of the job platform
+      placeholder: "Indeed / Glassdoor / Naukri / AngelList..."
+    validations:
+      required: true
+
+  - type: input
+    id: platform-url
+    attributes:
+      label: 🔗 Platform URL
+      description: Link to the job platform
+      placeholder: "https://www.indeed.com"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-this-platform
+    attributes:
+      label: ❓ Why This Platform?
+      description: Why should we prioritize this platform?
+      placeholder: |
+        - Used by millions of job seekers
+        - Has unique job listings
+        - Important for [country/industry]...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform-region
+    attributes:
+      label: 🌍 Primary Region
+      description: Where is this platform most popular?
+      options:
+        - "🌐 Global"
+        - "🇺🇸 USA"
+        - "🇮🇳 India"
+        - "🇬🇧 UK"
+        - "🇪🇺 Europe"
+        - "🇦🇺 Australia"
+        - "🇨🇦 Canada"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: login-required
+    attributes:
+      label: 🔐 Login Required?
+      description: Does applying to jobs require login?
+      options:
+        - "Yes - Login required to apply"
+        - "No - Can apply without login"
+        - "Partial - Some features need login"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: job-listing-info
+    attributes:
+      label: 📋 Job Listing Information Available
+      description: What info can we extract from job listings?
+      placeholder: |
+        - [ ] Job title
+        - [ ] Company name  
+        - [ ] Location
+        - [ ] Salary
+        - [ ] Description
+        - [ ] Requirements
+        - [ ] Application deadline
+        - [ ] Easy apply option
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty-estimate
+    attributes:
+      label: 🎯 Estimated Difficulty
+      description: How complex do you think this scraper would be?
+      options:
+        - "🟢 Easy - Simple HTML, no login"
+        - "🟡 Medium - Requires login, some JS"
+        - "🔴 Hard - Complex JS, anti-bot measures"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: willing-to-contribute
+    attributes:
+      label: 🤝 Contribution
+      options:
+        - label: I would like to implement this scraper myself
+        - label: I can help test this scraper
+        - label: I'm just requesting, not implementing
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: 📝 Additional Notes
+      description: Any technical notes, API discoveries, or other info?
+      placeholder: |
+        - They use React for frontend
+        - Jobs API endpoint: ...
+        - Anti-bot protection: Cloudflare/reCAPTCHA...
+    validations:
+      required: false

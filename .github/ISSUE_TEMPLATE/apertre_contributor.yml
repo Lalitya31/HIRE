@@ -1,0 +1,118 @@
+name: 🚀 Apertre 3.0 - Request to Contribute
+description: Request to work on an existing issue (For Apertre 3.0 participants)
+title: "[APERTRE] Request: <Issue Title>"
+labels: ["apertre3.0"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎉 Welcome to HireAI - Apertre 3.0!
+        
+        Thanks for your interest in contributing! Please fill out this form to request an issue assignment.
+        
+        **⚠️ Before submitting:**
+        - Make sure the issue you want to work on is **not already assigned**
+        - Read our [CONTRIBUTING.md](https://github.com/JAYATIAHUJA/HIRE/blob/main/CONTRIBUTING.md)
+        - Set up the project locally first to ensure you can run it
+
+  - type: input
+    id: issue-link
+    attributes:
+      label: 🔗 Issue Link
+      description: Link to the issue you want to work on
+      placeholder: "https://github.com/JAYATIAHUJA/HIRE/issues/XX"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: apertre-participant
+    attributes:
+      label: 📋 Apertre 3.0 Participant
+      description: Are you participating in Apertre 3.0?
+      options:
+        - "YES ✅"
+        - "NO ❌"
+    validations:
+      required: true
+
+  - type: input
+    id: discord-username
+    attributes:
+      label: 💬 Discord Username
+      description: Your Discord username for communication
+      placeholder: "username#1234 or @username"
+    validations:
+      required: true
+
+  - type: input
+    id: github-username
+    attributes:
+      label: 🐙 GitHub Username
+      description: Your GitHub username
+      placeholder: "@yourusername"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: experience-level
+    attributes:
+      label: 📊 Experience Level
+      description: What's your experience with open source?
+      options:
+        - "🌱 First-time contributor"
+        - "🌿 Beginner (1-3 PRs)"
+        - "🌳 Intermediate (3-10 PRs)"
+        - "🌲 Experienced (10+ PRs)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: 💡 Your Approach
+      description: Briefly describe how you plan to solve this issue
+      placeholder: |
+        I plan to:
+        1. First, I'll understand the existing code in...
+        2. Then, I'll implement...
+        3. Finally, I'll test by...
+    validations:
+      required: true
+
+  - type: input
+    id: completion-time
+    attributes:
+      label: ⏰ Expected Completion Time
+      description: How many days do you need to complete this?
+      placeholder: "3 days"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: ✅ Prerequisites Checklist
+      description: Please confirm you've completed these steps
+      options:
+        - label: I have read the [CONTRIBUTING.md](https://github.com/JAYATIAHUJA/HIRE/blob/main/CONTRIBUTING.md)
+          required: true
+        - label: I have set up the project locally and it runs successfully
+          required: true
+        - label: I have checked that this issue is not already assigned to someone
+          required: true
+        - label: I understand the issue requirements and acceptance criteria
+          required: true
+        - label: I will submit a PR within the expected completion time
+          required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 📝 Additional Information
+      description: Any relevant experience, portfolio links, or questions?
+      placeholder: |
+        - Portfolio: https://...
+        - Relevant experience: I've worked with React/NestJS before...
+        - Questions: I'm not sure about...
+    validations:
+      required: false

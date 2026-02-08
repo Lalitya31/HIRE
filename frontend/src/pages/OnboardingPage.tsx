@@ -11,6 +11,7 @@ function OnboardingPage() {
     const [step, setStep] = useState<OnboardingStep>('profile'); // Start with profile
     const [userId, setUserId] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
+    const [errors, setErrors] = useState<{ [key: string]: string }>({});
     const [loading, setLoading] = useState(false);
 
     // Profile form state
@@ -41,13 +42,34 @@ function OnboardingPage() {
 
     // Step 1: Save profile FIRST
     const handleSaveProfile = async () => {
-        if (!fullname || !email || !resumeText) {
-            setError('Please fill in all required fields (Name, Email, and Resume)');
-            return;
+        // Validation logic
+        const newErrors: { [key: string]: string } = {};
+        let isValid = true;
+
+        if (!fullname.trim()) {
+            newErrors.fullname = 'Full Name is required';
+            isValid = false;
         }
 
-        if (resumeText.trim().length < 50) {
-            setError('Please provide a more detailed resume (at least 50 characters)');
+        if (!email.trim()) {
+            newErrors.email = 'Email is required';
+            isValid = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            newErrors.email = 'Invalid email format';
+            isValid = false;
+        }
+
+        if (!resumeText.trim()) {
+            newErrors.resume = 'Resume text is required';
+            isValid = false;
+        } else if (resumeText.trim().length < 50) {
+            newErrors.resume = 'Please provide a more detailed resume (at least 50 characters)';
+            isValid = false;
+        }
+
+        setErrors(newErrors);
+
+        if (!isValid) {
             return;
         }
 
@@ -157,10 +179,14 @@ function OnboardingPage() {
                                     type="text"
                                     id="fullname"
                                     value={fullname}
-                                    onChange={(e) => setFullname(e.target.value)}
+                                    onChange={(e) => {
+                                        setFullname(e.target.value);
+                                        if (errors.fullname) setErrors({ ...errors, fullname: '' });
+                                    }}
                                     placeholder="John Doe"
-                                    required
+                                    className={errors.fullname ? 'error-border' : ''}
                                 />
+                                {errors.fullname && <span className="input-error">{errors.fullname}</span>}
                             </div>
 
                             <div className="form-group">
@@ -169,10 +195,14 @@ function OnboardingPage() {
                                     type="email"
                                     id="email"
                                     value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e) => {
+                                        setEmail(e.target.value);
+                                        if (errors.email) setErrors({ ...errors, email: '' });
+                                    }}
                                     placeholder="john@example.com"
-                                    required
+                                    className={errors.email ? 'error-border' : ''}
                                 />
+                                {errors.email && <span className="input-error">{errors.email}</span>}
                             </div>
 
                             <div className="form-group">
@@ -191,8 +221,12 @@ function OnboardingPage() {
                                 <textarea
                                     id="resume"
                                     value={resumeText}
-                                    onChange={(e) => setResumeText(e.target.value)}
-                                    placeholder="Paste your complete resume here. Include education, experience, projects, and skills...
+                                    onChange={(e) => {
+                                        setResumeText(e.target.value);
+                                        if (errors.resume) setErrors({ ...errors, resume: '' });
+                                    }}
+                                    className={errors.resume ? 'error-border' : ''}
+                                    placeholder={`Paste your complete resume here. Include education, experience, projects, and skills...
 
 Example:
 JOHN DOE
@@ -207,10 +241,10 @@ EDUCATION
 B.Tech in Computer Science, XYZ University (2022)
 
 SKILLS
-JavaScript, React, Node.js, Python, SQL"
+JavaScript, React, Node.js, Python, SQL`}
                                     rows={12}
-                                    required
                                 />
+                                {errors.resume && <span className="input-error">{errors.resume}</span>}
                                 <p className="help-text">
                                     💡 The more detailed your resume, the better job matches you'll get!
                                 </p>

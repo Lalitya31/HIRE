@@ -316,6 +316,29 @@ Look for issues labeled:
 - 🏷️ `documentation` - Great for getting started
 - 🏷️ `help wanted` - We need your help!
 
+### 🏷️ PR Labels
+
+Maintain proper labels before merging any Pull Requests.
+
+**Available Labels:** `easy`, `medium`, `hard`, `apertre3.0`
+
+| Rule | Description |
+|------|-------------|
+| ⚠️ **MANDATORY** | `apertre3.0` label is **required** for all PRs from program participants |
+| ⚠️ **ONE Only** | Admin should give only **ONE** difficulty label (`easy`, `medium`, or `hard`) per PR |
+
+### 🚨 Points System
+
+Earn points for your contributions based on difficulty!
+
+| Difficulty | Points |
+|------------|--------|
+| **EASY** | 5 PTS |
+| **MEDIUM** | 7 PTS |
+| **HARD** | 10 PTS |
+
+🏆 **Points contribute to the Apertre 3.0 leaderboard!**
+
 ### Getting Help
 
 - 💬 **Discord**: Join our community server

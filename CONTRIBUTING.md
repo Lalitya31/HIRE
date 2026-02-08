@@ -101,6 +101,34 @@ Request the `apertre3.0` label to be added to your issue in the comments.
 | `help wanted` | 🟡 Medium | We need community help |
 | `scraper` | 🟡 Medium | Add new job platform support |
 
+### 🏷️ Labels
+
+Maintain proper labels before merging any Pull Requests.
+
+**Available Labels:** `easy`, `medium`, `hard`, `apertre3.0`
+
+> ⚠️ **NOTE:** `apertre3.0` is a **mandatory label** to check for in all PRs from Apertre 3.0 participants.
+
+> ⚠️ **NOTE:** In a single PR, admin should give only **ONE difficulty label** (`easy`, `medium`, or `hard`)
+
+### 🚨 Points System
+
+Earn points for your contributions based on the difficulty of the issue!
+
+| Difficulty | Points |
+|------------|--------|
+| **EASY** | 5 PTS |
+| **MEDIUM** | 7 PTS |
+| **HARD** | 10 PTS |
+
+**How it works:**
+1. Complete your assigned issue and submit a PR
+2. Maintainer reviews and adds the appropriate difficulty label (`easy`, `medium`, or `hard`)
+3. Once merged, you earn the corresponding points!
+4. Points are tracked throughout the Apertre 3.0 program
+
+**Leaderboard:** Points contribute to the Apertre 3.0 leaderboard. Higher points = higher ranking! 🏆
+
 ---
 
 ## 🚀 Getting Started

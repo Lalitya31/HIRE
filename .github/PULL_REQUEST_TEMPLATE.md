@@ -8,11 +8,28 @@ Fixes #<issue_number>
 
 ### 📋 Apertre 3.0 Information
 
+> ⚠️ **MANDATORY for Apertre 3.0 Participants:** Ensure the `apertre3.0` label is added to this PR!
+
 | Field | Value |
 |-------|-------|
 | **Apertre 3.0 Participant** | YES / NO |
 | **Discord Username** | @your_username |
-| **Issue Difficulty** | 🟢 Easy / 🟡 Medium / 🔴 Hard |
+
+---
+
+### 🏷️ Labels (For Maintainers)
+
+> **Note:** Maintainers will add ONE difficulty label based on the complexity of the contribution.
+
+| Label | Points | Description |
+|-------|--------|-------------|
+| `easy` | 5 PTS | Simple fixes, typos, minor changes |
+| `medium` | 7 PTS | Moderate features, bug fixes |
+| `hard` | 10 PTS | Complex features, major changes |
+
+**Required Labels:**
+- [ ] `apertre3.0` - ⚠️ **MANDATORY** for all Apertre 3.0 participants
+- [ ] Difficulty label (`easy` / `medium` / `hard`) - Added by maintainer
 
 ---
 
@@ -31,7 +48,8 @@ Fixes #<issue_number>
 - [ ] 🎨 UI/UX improvement
 - [ ] 🧪 Test (adding or updating tests)
 - [ ] 🔧 Refactor (code change that neither fixes a bug nor adds a feature)
-- [ ] 📦 Build/Config (changes to build process or dependencies)
+- [ ] 📝 Documentation update
+- [ ] 🕷️ New scraper
 
 ---
 
@@ -64,7 +82,7 @@ Fixes #<issue_number>
 - [ ] I have commented my code where necessary
 - [ ] I have updated documentation if needed
 - [ ] My changes don't generate new warnings
-- [ ] I have added the `apertre3.0` label to this PR
+- [ ] I have requested the `apertre3.0` label (if applicable)
 - [ ] I have self-reviewed my code before submitting
 
 ---

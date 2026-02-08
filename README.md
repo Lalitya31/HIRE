@@ -1,4 +1,4 @@
-# 🚀 HireAI - Intelligent Job Application Automation Engine
+# 🚀 HIRE - Intelligent Job Application Automation Engine
 
 An AI-powered job application automation platform that scrapes jobs, matches them to your profile, and automates the application process using Playwright and LLM-powered form filling.
 
@@ -12,7 +12,7 @@ Applying to jobs is time-consuming and repetitive. Job seekers spend hours:
 - Writing cover letters for each position
 
 ### The Solution
-HireAI automates this entire workflow:
+HIRE automates this entire workflow:
 1. **Scrapes jobs** from platforms like Internshala based on your skills
 2. **Ranks jobs** by relevance using AI-powered matching (vector embeddings)
 3. **Tailors resumes** automatically for each job using LLM
@@ -302,6 +302,45 @@ MIT License
 3. Commit changes (`git commit -m 'Add amazing feature'`)
 4. Push to branch (`git push origin feature/amazing`)
 5. Open Pull Request
+
+### 🕷️ Scraper Contributions
+
+We welcome contributions to expand our job scraping capabilities! You can contribute in two ways:
+
+#### Option 1: Individual Platform Scrapers
+Implement a dedicated scraper for a specific job platform. Each platform scraper should:
+- Be placed in `backend/src/scrapers/`
+- Follow the existing scraper interface pattern (see `InternshalaScraperV2` as reference)
+- Handle login, job listing extraction, and job detail parsing
+- Include error handling and retry logic
+
+**Platforms we'd love scrapers for:**
+- LinkedIn Jobs
+- Indeed
+- Glassdoor
+- Naukri
+- AngelList/Wellfound
+- RemoteOK
+- WeWorkRemotely
+- Hacker News Jobs
+
+#### Option 2: Unified Multi-Platform Scraper
+Alternatively, you can implement a single unified scraper that aggregates jobs from multiple platforms. This could:
+- Leverage libraries like [JobSpy](https://github.com/speedyapply/JobSpy) for multi-platform scraping
+- Normalize job data from different sources into our standard format
+- Provide a configuration-based approach to enable/disable specific platforms
+
+**Example unified scraper approach:**
+```typescript
+interface UnifiedScraperConfig {
+  platforms: ('linkedin' | 'indeed' | 'glassdoor' | 'internshala')[];
+  searchTerms: string[];
+  location: string;
+  resultsPerPlatform: number;
+}
+```
+
+Check out our [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines on submitting scrapers.
 
 ---
 

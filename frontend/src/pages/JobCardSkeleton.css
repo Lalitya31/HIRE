@@ -51,7 +51,7 @@
 }
 
 /* Shimmer animation */
-@keyframes shimmer {
+@keyframes jobCardSkeletonShimmer {
   100% {
     transform: translateX(100%);
   }
@@ -72,9 +72,11 @@
 
 /* Offset shimmer timing */
 .variant-2::after {
-  animation-delay: 0.15s;
+  animation: jobCardSkeletonShimmer 1.5s infinite;
+
 }
 
 .variant-3::after {
-  animation-delay: 0.3s;
+  animation: jobCardSkeletonShimmer 1.5s infinite;
+
 }

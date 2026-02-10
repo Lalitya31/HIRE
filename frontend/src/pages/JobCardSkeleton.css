@@ -23,27 +23,27 @@
 }
 
 /* Base skeleton line */
-.skeleton-line,
-.skeleton-pill {
+.job-card.skeleton .skeleton-line,
+.job-card.skeleton .skeleton-pill {
   background: rgba(0, 0, 0, 0.08);
   border-radius: 6px;
   margin-bottom: 10px;
 }
 
 /* Title */
-.skeleton-line.title {
+.job-card.skeleton .skeleton-line.title {
   height: 18px;
   width: 70%;
   margin-bottom: 14px;
 }
 
 /* Body lines */
-.skeleton-line {
+.job-card.skeleton .skeleton-line {
   height: 12px;
 }
 
 /* Bottom CTA placeholder */
-.skeleton-pill {
+.job-card.skeleton .skeleton-pill {
   height: 28px;
   width: 45%;
   border-radius: 999px;

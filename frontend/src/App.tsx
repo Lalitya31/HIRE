@@ -7,8 +7,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<FeedPage />} />
-<Route path="/onboarding" element={<OnboardingPage />} />
-<Route path="/applications/:id" element={<ApplicationPreviewPage />} />
+      <Route path="/onboarding" element={<OnboardingPage />} />
+      <Route path="/applications/:id" element={<ApplicationPreviewPage />} />
     </Routes>
   );
 }

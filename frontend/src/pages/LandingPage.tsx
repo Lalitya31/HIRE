@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./LandingPage.css";
 
 export default function LandingPage() {
@@ -47,13 +48,16 @@ export default function LandingPage() {
               forms through browser automation.
             </p>
             <div className="hero-actions">
+              <Link to="/onboarding" className="cta-primary">
+                Let's get started <span>→</span>
+              </Link>
               <a
                 href="https://github.com/JAYATIAHUJA/HIRE"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cta-primary"
+                className="cta-secondary"
               >
-                View on GitHub <span>→</span>
+                View on GitHub
               </a>
             </div>
           </div>

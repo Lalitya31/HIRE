@@ -184,6 +184,7 @@ function OnboardingPage() {
                                         if (errors.fullname) setErrors({ ...errors, fullname: '' });
                                     }}
                                     placeholder="John Doe"
+                                    required
                                     className={errors.fullname ? 'error-border' : ''}
                                 />
                                 {errors.fullname && <span className="input-error">{errors.fullname}</span>}
@@ -200,6 +201,7 @@ function OnboardingPage() {
                                         if (errors.email) setErrors({ ...errors, email: '' });
                                     }}
                                     placeholder="john@example.com"
+                                    required
                                     className={errors.email ? 'error-border' : ''}
                                 />
                                 {errors.email && <span className="input-error">{errors.email}</span>}
@@ -225,6 +227,7 @@ function OnboardingPage() {
                                         setResumeText(e.target.value);
                                         if (errors.resume) setErrors({ ...errors, resume: '' });
                                     }}
+                                    required
                                     className={errors.resume ? 'error-border' : ''}
                                     placeholder={`Paste your complete resume here. Include education, experience, projects, and skills...
 
